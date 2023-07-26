@@ -1,0 +1,126 @@
+Pandas basicAssignment Questions 
+Assignment 
+Q1. Create a Pandas Series that contains the following data: 4, 8, 15, 16, 23, and 42. Then, print the series.
+import pandas as pd
+series=[4, 8, 15, 16, 23, 42]
+print_series=pd.Series(series)
+print(print_series)
+ 
+Q2. Create a variable of list type containing 10 elements in it, and apply pandas.Series function on the  variable print it. 
+import pandas as pd
+series=[1,2,3,4,5,6,7,8,9,10]
+print_series=pd.Series(series)
+print(print_series)
+
+Q3. Create a Pandas DataFrame that contains the following data: 
+
+Name 
+Alice
+ Bob
+ Charlie
+Bob  
+Age 25 
+30 
+
+27 
+Gender Female Male 
+Female
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+data={
+    "NAME":["alice","charlie","bob"],
+    "Age":[25,30,27],
+    'Gender':['female','male','female']
+}
+df=pd.DataFrame(data)
+print(df)
+
+
+Q4. What is ‘DataFrame’ in pandas and how is it different from pandas.series? Explain with an example. 
+A DataFrame in pandas is a two-dimensional, tabular data structure, similar to a spreadsheet or SQL table. It consists of rows and columns, where each column can have a different data type
+data={
+    "NAME":["alice","charlie","bob"],
+    "Age":[25,30,27],
+    'Gender':['female','male','female']
+}
+df=pd.DataFrame(data)
+print(df)
+A Series in pandas is a one-dimensional labeled array. It is similar to a list or a one-column DataFrame. Each element in a Series has a corresponding label (called the index) that allows for fast and efficient data retrieval.
+import pandas as pd
+series=[4, 8, 15, 16, 23, 42]
+print_series=pd.Series(series)
+print(print_series)
+
+
+
+Q5. What are some common functions you can use to manipulate data in a Pandas DataFrame? Can  you give an example of when you might use one of these functions? 
+df['column']: Access a specific column in the DataFrame.
+df[['col1', 'col2']]: Access multiple columns in the DataFrame.
+df.drop('column_name', axis=1): Drop a specific column from the DataFrame.
+df.drop(index_label): Drop a specific row from the DataFrame.
+df.rename(columns={'old_name': 'new_name'}): Rename columns in the DataFrame.
+df.groupby('column').mean(): Calculate the mean of grouped data.
+df.groupby('column').sum(): Calculate the sum of grouped data.
+df.groupby('column').count(): Count the occurrences in each group.
+import pandas as pd
+
+data = {
+    'Name': ['Alice', 'Bob', 'Claire'],
+    'Age': [25, 30, 27],
+    'Grade': [85, 92, 78]
+}
+
+df = pd.DataFrame(data)
+df['Age'].mean()
+print(df)
+
+
+Q6. Which of the following is mutable in nature Series, DataFrame, Panel? 
+Among the options given, both Series and DataFrame are mutable in nature
+Q7. Create a DataFrame using multiple Series. Explain with an example. 
+series={
+    'Number of students':[1,2,3,4,5],
+    'name of teachers':['parshav','sushmita','muskan','nabeel','tanishka']
+    
+}  
+df=pd.DataFrame(series)
+print(df)
+
+
+Note:  Create your assignment in Jupyter notebook and upload it in GitHub & share that github   repository link through your dashboard. Make sure the repository is public. 
+Data Science Masters 
